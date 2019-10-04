@@ -27,7 +27,7 @@ export const Button = styled.button`
   font-size: 1rem;
 
   &:active {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 `;
 

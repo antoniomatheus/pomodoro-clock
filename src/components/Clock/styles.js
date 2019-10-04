@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: red;
+  background-color: #7f1617;
 `;
 
 export const Time = styled.span`
@@ -24,4 +24,8 @@ export const Button = styled.button`
   padding: 8px;
   background-color: transparent;
   border: none;
+
+  &:active {
+    transform: scale(0.9);
+  }
 `;

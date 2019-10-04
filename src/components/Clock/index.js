@@ -5,13 +5,16 @@ import { FaPlay, FaPause, FaStop } from 'react-icons/fa';
 
 import { Container, Time, Control, Button } from './styles';
 
-export default function Clock({ running }) {
+export default function Clock(props) {
+  const { running, currentTime, onStartPause, onStop } = props;
   return (
     <Container>
-      <Time>25:00</Time>
+      <Time>{currentTime}</Time>
       <Control>
-        <Button>{running ? <FaPause /> : <FaPlay />}</Button>
-        <Button>
+        <Button onClick={onStartPause}>
+          {running ? <FaPause /> : <FaPlay />}
+        </Button>
+        <Button onClick={onStop}>
           <FaStop />
         </Button>
       </Control>
